@@ -11,7 +11,7 @@ export class Water extends THREE.Mesh {
       fragmentShader: waterFragmentShader,
       uniforms: {
         uTime: { value: 0 },
-        uOpacity: { value: 0.8 },
+        uOpacity: { value: 0.2 },
         uEnvironmentMap: { value: options.environmentMap },
         uWavesAmplitude: { value: 0.025 },
         uWavesFrequency: { value: 1.07 },

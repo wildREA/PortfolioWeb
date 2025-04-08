@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { Water } from './objects/Water';
 import { Ground } from './objects/Ground';
+import { SeaFloor } from './objects/SeaFloor';
 import { setupUI } from './ui';
 
 // Animation
@@ -40,15 +41,20 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
 // Add some light to see the ground material
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.28);
 scene.add(ambientLight);
 
-const waterResolution = { size: 512 };
+const waterResolution = { size: 256 };
 const water = new Water({
   environmentMap,
   resolution: waterResolution.size
 });
+water.scale.set(5, 5, 5);
 scene.add(water);
+
+// Add the sea floor between water and ground
+const seaFloor = new SeaFloor();
+scene.add(seaFloor);
 
 const ground = new Ground({
   texture: poolTexture
@@ -59,6 +65,7 @@ function animate() {
   const elapsedTime = clock.getElapsedTime();
   water.update(elapsedTime);
   ground.update(elapsedTime);
+  seaFloor.update(elapsedTime);
   controls.update();
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
@@ -73,3 +80,5 @@ window.addEventListener('resize', () => {
 
 animate();
 setupUI({ waterResolution, water, ground });
+
+

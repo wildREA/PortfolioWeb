@@ -96,6 +96,7 @@ void main() {
   // Shape the caustics
   caustics = smoothstep(0.5 - uCausticsThickness, 0.5 + uCausticsThickness, caustics);
 
+  // Only show the texture and caustics, no base color
   vec3 finalColor = texColor.rgb + caustics * uCausticsColor;
 
   gl_FragColor = vec4(finalColor, 1.0);
