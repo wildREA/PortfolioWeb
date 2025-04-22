@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
     <nav class="nav-container">
@@ -35,24 +37,302 @@
     </nav>
 
     <main class="main-content">
-        <div class="about">
-            <div class="profile-container">
-                <div class="profile-box">
-                    <img src="rsc/profile.jpg" alt="Profile" class="profile-image">
+        <!-- About section -->
+        <section class="about-section">
+            <div class="about">
+                <div class="profile-container">
+                    <div class="profile-box">
+                        <img src="rsc/pro.jpg" alt="Profile" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-container">
+                    <div class="about-box">
+                        <h1>Ahmet Sütcü</h1>
+                        <p>I’m a 17 year-old programmer from Denmark, focused on full-stack development with a passion for backend systems. I enjoy solving real-life problems by optimizing systems and automating tasks to boost efficiency.</p>
+                        <p>Learning through hands-on projects is how I grow, and I’m always excited to explore new technologies. My goal is to build solutions that make a real impact while continuing to improve my skills.</p>
+                    </div>
                 </div>
             </div>
-            <div class="about-container">
-                <div class="about-box">
-                    <h1>Ahmet Sütcü</h1>
-                    <p>I’m a 17 year-old programmer from Denmark, focused on full-stack development with a passion for backend systems. I enjoy solving real-life problems by optimizing systems and automating tasks to boost efficiency.</p>
-                    <p>Learning through hands-on projects is how I grow, and I’m always excited to explore new technologies. My goal is to build solutions that make a real impact while continuing to improve my skills.</p>
+        </section>
+        
+        <!-- Projects section -->
+        <section class="projects-section">
+            <h2 class="section-header">My Projects</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn">
+                    <i data-feather="chevron-left"></i>
+                </button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <!-- VisualBotCrafter -->
+                        <div class="project-card" data-index="0">
+                            <div class="project-img-container">
+                                <div id="project3d-1" class="project-3d-container" data-image="images/vsb.png"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">VisualBotCrafter</h3>
+                                <p class="project-description">A highly flexible automation platform that enables users to develop and deploy custom bots through an intuitive visual interface. Designed with enterprise-grade scalability to handle complex workflows and high-volume task processing.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Electron</span>
+                                </div>
+                                <a href="https://github.com/Mech654/VisualBotCrafter" class="project-link" target="_blank">
+                                    <i data-feather="github"></i>
+                                    View Project
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- WebPulse -->
+                        <div class="project-card" data-index="1">
+                            <div class="project-img-container">
+                                <div id="project3d-2" class="project-3d-container" data-image="images/wp.png"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">WebPulse</h3>
+                                <p class="project-description">A local app built with WPF and .NET that helps users track updates for TV series, e-books, manga, and similar media across various websites. Uses Puppeteer for web scraping to monitor content updates.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">.NET</span>
+                                    <span class="tech-tag">PuppeteerSharp</span>
+                                </div>
+                                <a href="https://github.com/Mech654/WebPulse" class="project-link" target="_blank">
+                                    <i data-feather="github"></i>
+                                    View Project
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- electron-market -->
+                        <div class="project-card" data-index="2">
+                            <div class="project-img-container">
+                                <div id="project3d-3" class="project-3d-container" data-image="images/eam.png"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Electron Market</h3>
+                                <p class="project-description">A modern automotive marketplace application built with Electron. Features real-time chat functionality between buyers and sellers with database encryption for messages, status-based access control, and a wallet-based payment system. The sleek, minimalistic interface showcases vehicle listings with comprehensive details.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Electron</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">WebSockets</span>
+                                </div>
+                                <a href="https://github.com/Mech654/electron-market" class="project-link" target="_blank">
+                                    <i data-feather="github"></i>
+                                    View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn">
+                    <i data-feather="chevron-right"></i>
+                </button>
+            </div>
+            <div class="carousel-nav">
+                <div class="carousel-indicator current"></div>
+                <div class="carousel-indicator"></div>
+                <div class="carousel-indicator"></div>
+            </div>
+        </section>
+        
+        <!-- Skills section -->
+        <section class="skills-section">
+            <h2 class="section-header">Skills</h2>
+            <div class="skills-container">
+                <!-- Frontend Skills Card -->
+                <div class="skill-category-card" data-category="frontend">
+                    <div class="skill-card-header">
+                        <i data-feather="layout"></i>
+                        <h3>Frontend</h3>
+                        <i data-feather="chevron-down" class="toggle-icon"></i>
+                    </div>
+                    <div class="skill-card-content">
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Three.js</span>
+                            <span class="skill-tag">Socket.io</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">SASS/SCSS</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills Card -->
+                <div class="skill-category-card" data-category="backend">
+                    <div class="skill-card-header">
+                        <i data-feather="server"></i>
+                        <h3>Backend</h3>
+                        <i data-feather="chevron-down" class="toggle-icon"></i>
+                    </div>
+                    <div class="skill-card-content">
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">Authentication</span>
+                            <span class="skill-tag">Websockets</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Networking Skills Card -->
+                <div class="skill-category-card" data-category="networking">
+                    <div class="skill-card-header">
+                        <i data-feather="globe"></i>
+                        <h3>Networking</h3>
+                        <i data-feather="chevron-down" class="toggle-icon"></i>
+                    </div>
+                    <div class="skill-card-content">
+                        <div class="skill-tags">
+                            <span class="skill-tag">TCP/IP</span>
+                            <span class="skill-tag">HTTP/HTTPS</span>
+                            <span class="skill-tag">WebSockets</span>
+                            <span class="skill-tag">API Integration</span>
+                            <span class="skill-tag">OAuth</span>
+                            <span class="skill-tag">JWT</span>
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">Web Scraping</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- App Development Skills Card -->
+                <div class="skill-category-card" data-category="app">
+                    <div class="skill-card-header">
+                        <i data-feather="smartphone"></i>
+                        <h3>App Development</h3>
+                        <i data-feather="chevron-down" class="toggle-icon"></i>
+                    </div>
+                    <div class="skill-card-content">
+                        <div class="skill-tags">
+                            <span class="skill-tag">Electron</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">.NET</span>
+                            <span class="skill-tag">WPF</span>
+                            <span class="skill-tag">Desktop Apps</span>
+                            <span class="skill-tag">Cross-Platform</span>
+                            <span class="skill-tag">UI Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Database Skills Card -->
+                <div class="skill-category-card" data-category="database">
+                    <div class="skill-card-header">
+                        <i data-feather="database"></i>
+                        <h3>Databases</h3>
+                        <i data-feather="chevron-down" class="toggle-icon"></i>
+                    </div>
+                    <div class="skill-card-content">
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Database Design</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Query Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Development Tools Card -->
+                <div class="skill-category-card" data-category="devtools">
+                    <div class="skill-card-header">
+                        <i data-feather="git-branch"></i>
+                        <h3>Development Tools</h3>
+                        <i data-feather="chevron-down" class="toggle-icon"></i>
+                    </div>
+                    <div class="skill-card-content">
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Webpack</span>
+                            <span class="skill-tag">NPM</span>
+                            <span class="skill-tag">ESLint</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
+    <script src="js/project3d.js"></script>
+    <script src="js/skills.js"></script>
     <script>
         feather.replace();
+        
+        // Project carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.carousel-track');
+            const cards = Array.from(document.querySelectorAll('.project-card'));
+            const nextButton = document.querySelector('.next-btn');
+            const prevButton = document.querySelector('.prev-btn');
+            const indicators = Array.from(document.querySelectorAll('.carousel-indicator'));
+            
+            let currentIndex = 0;
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            
+            // Set initial position
+            function updateCarousel() {
+                track.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+                
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('current');
+                    } else {
+                        indicator.classList.remove('current');
+                    }
+                });
+                
+                // Update 3D project for the current visible card
+                updateActiveProject(currentIndex);
+            }
+            
+            // Handle next button click
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+            
+            // Handle prev button click
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+            
+            // Handle indicator clicks
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+        });
     </script>
 </body>
 </html>
