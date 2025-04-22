@@ -15,21 +15,27 @@
         <div class="nav-content">
             <ul class="nav-links">
                 <li>
-                    <a href="/about">
+                    <a href="#about">
                         <i data-feather="user"></i>
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="/projects">
+                    <a href="#projects">
                         <i data-feather="briefcase"></i>
-                        projects
+                        Projects
                     </a>
                 </li>
                 <li>
-                    <a href="/skills">
+                    <a href="#skills">
                         <i data-feather="edit-3"></i>
                         Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i data-feather="mail"></i>
+                        Contact
                     </a>
                 </li>
             </ul>
@@ -38,11 +44,25 @@
 
     <main class="main-content">
         <!-- About section -->
-        <section class="about-section">
+        <section id="about" class="about-section">
             <div class="about">
                 <div class="profile-container">
                     <div class="profile-box">
                         <img src="rsc/pro.jpg" alt="Profile" class="profile-image">
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-item">
+                            <i data-feather="map-pin"></i>
+                            <span>Odense</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-feather="mail"></i>
+                            <a href="mailto:Drahmet2007@hotmail.com">Drahmet2007@hotmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i data-feather="github"></i>
+                            <a href="https://github.com/Mech654" target="_blank">github.com/Mech654</a>
+                        </div>
                     </div>
                 </div>
                 <div class="about-container">
@@ -56,7 +76,7 @@
         </section>
         
         <!-- Projects section -->
-        <section class="projects-section">
+        <section id="projects" class="projects-section">
             <h2 class="section-header">My Projects</h2>
             <div class="carousel-container">
                 <button class="carousel-btn prev-btn">
@@ -139,7 +159,7 @@
         </section>
         
         <!-- Skills section -->
-        <section class="skills-section">
+        <section id="skills" class="skills-section">
             <h2 class="section-header">Skills</h2>
             <div class="skills-container">
                 <!-- Frontend Skills Card -->
@@ -274,10 +294,62 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Contact section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-header">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-intro">
+                    <i data-feather="mail" class="contact-icon"></i>
+                    <p>Feel free to reach out if you have any questions or would like to collaborate on a project.</p>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/mdkgoodn" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message here..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i data-feather="send"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <!-- GitHub Stats Modal -->
+    <div class="modal" id="github-stats-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="github-stats-container">
+                    <img src="https://github-readme-stats.vercel.app/api?username=Mech654&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" 
+                         alt="Mech654's GitHub Stats" class="github-stats">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mech654&theme=tokyonight&hide_border=true" 
+                         alt="Mech654's Streak" class="github-stats">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mech654&theme=tokyonight&show_icons=true&hide_border=true&layout=compact" 
+                         alt="Mech654's Top Languages" class="github-stats">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/project3d.js"></script>
     <script src="js/skills.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/modal.js"></script>
     <script>
         feather.replace();
         
