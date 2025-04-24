@@ -3,11 +3,11 @@
     --text-color: #ffffff;
     --nav-height: 60px;
     --border-color: rgba(255, 255, 255, 0.1);
-    --accent-color-primary: #00C2CB;
-    --accent-color-secondary: #4D83DB;
+    --accent-color-primary: #cb8b00;
+    --accent-color-secondary: #dbae4d;
     --accent-gradient: linear-gradient(90deg, var(--accent-color-primary), var(--accent-color-secondary));
     --card-bg-gradient: linear-gradient(145deg, #1a1a1a, #232323);
-    --card-border: #00C2CB;
+    --card-border: #cb8400;
 }
 
 * {
@@ -114,6 +114,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(255, 179, 0, 0.14);
 }
 
 .about-box {
@@ -122,6 +123,9 @@ body {
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-left: 4px solid var(--card-border);
+    border-top: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
     color: #f5f5f5;
     max-width: 800px;
     margin: 0 auto;
@@ -132,6 +136,7 @@ body {
     margin-bottom: 1.5rem;
     font-weight: 700;
     background: var(--accent-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
@@ -179,7 +184,7 @@ body {
 /* Optional hover effect for card-like feel */
 .profile-container:hover .profile-image {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
+    transform: translateSize(-2px);
 }
 
 /* Contact box styling */
@@ -247,6 +252,7 @@ body {
     text-align: center;
     font-weight: 700;
     background: var(--accent-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
@@ -265,6 +271,7 @@ body {
     text-align: center;
     font-weight: 700;
     background: var(--accent-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
@@ -355,7 +362,7 @@ body {
 }
 
 .tech-tag {
-    background: rgba(0, 194, 203, 0.2);
+    background: rgba(203, 98, 0, 0.2);
     color: var(--accent-color-primary);
     padding: 0.25rem 0.7rem;
     border-radius: 100px;
@@ -402,7 +409,7 @@ body {
 }
 
 .carousel-btn:hover {
-    background: rgba(0, 194, 203, 0.5);
+    background: rgba(203, 81, 0, 0.5);
     transform: scale(1.05);
 }
 
@@ -505,7 +512,7 @@ body {
 }
 
 .skill-tag {
-    background: #0D3D3E;
+    background: #4b2a0f;
     color: var(--accent-color-primary);
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
@@ -516,7 +523,7 @@ body {
 }
 
 .skill-tag:hover {
-    background: #0F4A4B;
+    background: #3e230d;
     transform: translateY(-2px);
 }
 
