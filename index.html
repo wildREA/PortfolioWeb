@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>wildREA - Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js" type="text"></script> <!-- 'text' type unblocks loader -->
+    <script src="js/project3d.js" defer></script>
+    <script src="js/skills.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/formReset.js" defer></script>
 </head>
 <body>
     <nav class="nav-container">
@@ -69,7 +75,7 @@
                     <div class="about-box">
                         <h1>wildREA</h1>
                         <p> Hey there! I’m an 18-year-old developer from os with a strong interest in full-stack programming — especially the magic happening behind the scenes in backend systems. I enjoy tackling real-world challenges by streamlining processes and automating workflows to enhance productivity. What I gain is satisfaction from making things run faster, smoother, and smarter with automation.</p>
-                        <p>I learn best by diving headfirst into projects (trial, error, and the occasional "why isn’t this working?!"). I’m always on the lookout for cool new tech to tinker with, and my mission is simple: build awesome stuff that actually makes a difference—while leveling up my skills along the way.</p>
+                        <p>I learn best by diving headfirst into projects (trial, error, and the occasional "why isn’t this working?!"). I’m always on the lookout for cool new tech to tinker with, and my mission is simple: build awesome stuff that actually makes a difference — while leveling up my skills along the way.</p>
                     </div>
                 </div>
             </div>
@@ -84,14 +90,14 @@
                 </button>
                 <div class="carousel-track-container">
                     <div class="carousel-track">
-                        <!-- VisualBotCrafter -->
+                        <!-- Computer Hardware Statistics Analysis -->
                         <div class="project-card" data-index="0">
                             <div class="project-img-container">
                                 <div id="project3d-1" class="project-3d-container" data-image="images/cct.jpg"></div>
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">Computer Components Tracker</h3>
-                                <p class="project-description">A WPF application built with .NET, designed to display real-time hardware statistics in a sleek, minimalistic interface that supports light and dark theme. Displaying values in familiar, readable formats like MB/s for network usage, with high sensitivity and a 1-second update interval for accurate by default (available in settings for milliseconds), dynamic readings. The application has language support for many spoken languges around the world.</p>
+                                <p class="project-description">A WPF application built with .NET, designed to display real-time hardware statistics in a sleek, minimalistic interface that supports light and dark theme. Displaying values in familiar, readable formats like MB/s for network usage, with high sensitivity and a 1-second update interval for accurate by default (available in settings for milliseconds), dynamic readings. The application has language support for many spoken languages around the world.</p>
                                 <div class="project-tech">
                                     <span class="tech-tag">C#</span>
                                     <span class="tech-tag">.NET 8.0</span>
@@ -109,7 +115,7 @@
                             </div>
                         </div>
                         
-                        <!-- WebPulse -->
+                        <!-- Blockhain Supply Chain Application -->
                         <div class="project-card" data-index="1">
                             <div class="project-img-container">
                                 <div id="project3d-2" class="project-3d-container" data-image="images/bcscApp.jpg"></div>
@@ -135,7 +141,7 @@
                             </div>
                         </div>
                         
-                        <!-- electron-market -->
+                        <!-- Electron Automotive Market -->
                         <div class="project-card" data-index="2">
                             <div class="project-img-container">
                                 <div id="project3d-3" class="project-3d-container" data-image="images/eam.png"></div>
@@ -156,7 +162,7 @@
                                     <span class="tech-tag">API</span>
                                     <span class="tech-tag">TypeScript</span>
                                 </div>
-                                <a href="https://github.com/Mech654/electron-market" class="project-link" target="_blank">
+                                <a href="https://github.com/wildREA/electron-market" class="project-link" target="_blank">
                                     <i data-feather="github"></i>
                                     View Project
                                 </a>
@@ -178,7 +184,7 @@
                                     <span class="tech-tag">Discord.js</span>
                                 </div>
                                 <a href="https://discord.com/discovery/applications/1306535599011790890" class="project-link" target="_blank">
-                                    <i data-feather="github"></i>
+                                    <i data-feather="discord"></i>
                                     View Project
                                 </a>
                             </div>
@@ -200,7 +206,7 @@
         <section id="skills" class="skills-section">
             <h2 class="section-header">Skills</h2>
             <div class="skills-container">
-                <!-- Frontend Skills Card -->
+                <!-- Frontend skills card -->
                 <div class="skill-category-card" data-category="frontend">
                     <div class="skill-card-header">
                         <i data-feather="layout"></i>
@@ -209,22 +215,19 @@
                     <div class="skill-card-content expanded">
                         <div class="skill-tags">
                             <span class="skill-tag">React.js</span>
-                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Responsive Design</span>
+                            <span class="skill-tag">SEO</span>
+                            <span class="skill-tag">Matplotlib</span>
                             <span class="skill-tag">HTML5</span>
                             <span class="skill-tag">CSS3</span>
                             <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">Three.js</span>
                             <span class="skill-tag">Socket.io</span>
-                            <span class="skill-tag">Tailwind CSS</span>
                             <span class="skill-tag">Bootstrap</span>
-                            <span class="skill-tag">SASS/SCSS</span>
-                            <span class="skill-tag">UI/UX Design</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Backend Skills Card -->
+                <!-- Backend skills card -->
                 <div class="skill-category-card" data-category="backend">
                     <div class="skill-card-header">
                         <i data-feather="server"></i>
@@ -235,19 +238,19 @@
                             <span class="skill-tag">Node.js</span>
                             <span class="skill-tag">Express.js</span>
                             <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Lua(u)</span>
                             <span class="skill-tag">PHP</span>
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">ASP.NET Core</span>
                             <span class="skill-tag">C#</span>
-                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">REST APIs</span>
                             <span class="skill-tag">Authentication</span>
-                            <span class="skill-tag">Websockets</span>
+                            <span class="skill-tag">WebSockets</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Networking Skills Card -->
+                <!-- Networking skills card -->
                 <div class="skill-category-card" data-category="networking">
                     <div class="skill-card-header">
                         <i data-feather="globe"></i>
@@ -262,12 +265,13 @@
                             <span class="skill-tag">OAuth</span>
                             <span class="skill-tag">JWT</span>
                             <span class="skill-tag">Network Security</span>
-                            <span class="skill-tag">Web Scraping</span>
+                            <span class="skill-tag">Hashing</span>
+                            <span class="skill-tag">Data Encryption</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- App Development Skills Card -->
+                <!-- App development skills card -->
                 <div class="skill-category-card" data-category="app">
                     <div class="skill-card-header">
                         <i data-feather="smartphone"></i>
@@ -276,6 +280,7 @@
                     <div class="skill-card-content expanded">
                         <div class="skill-tags">
                             <span class="skill-tag">Electron</span>
+                            <span class="skill-tag">Discord.js</span>
                             <span class="skill-tag">JavaScript</span>
                             <span class="skill-tag">C#</span>
                             <span class="skill-tag">Python</span>
@@ -283,12 +288,12 @@
                             <span class="skill-tag">WPF</span>
                             <span class="skill-tag">Desktop Apps</span>
                             <span class="skill-tag">Cross-Platform</span>
-                            <span class="skill-tag">UI Design</span>
+                            <span class="skill-tag">UI/UX Design</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Database Skills Card -->
+                <!-- Database skills card -->
                 <div class="skill-category-card" data-category="database">
                     <div class="skill-card-header">
                         <i data-feather="database"></i>
@@ -302,11 +307,13 @@
                             <span class="skill-tag">Database Design</span>
                             <span class="skill-tag">SQL</span>
                             <span class="skill-tag">Query Optimization</span>
+                            <span class="skill-tag">Data Modeling</span>
+                            <span class="skill-tag">Data Migration</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Development Tools Card -->
+                <!-- Development tools card -->
                 <div class="skill-category-card" data-category="devtools">
                     <div class="skill-card-header">
                         <i data-feather="git-branch"></i>
@@ -334,9 +341,9 @@
             <div class="contact-container">
                 <div class="contact-intro">
                     <i data-feather="mail" class="contact-icon"></i>
-                    <p>Feel free to reach out if you have any questions or would like to collaborate on a project.</p>
+                    <p>Feel free to reach out if you havchate any questions or would like to collaborate on a project.</p>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/mdkgoodn" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/xbloljrd" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -353,7 +360,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Your message here..." rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">
+                    <button id="resetPoint" type="submit" class="submit-btn">
                         <span>Send Message</span>
                         <i data-feather="send"></i>
                     </button>
@@ -362,82 +369,21 @@
         </section>
     </main>
 
-    <!-- GitHub Stats Modal -->
+    <!-- GitHub stats modal -->
     <div class="modal" id="github-stats-modal">
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-body">
                 <div class="github-stats-container">
-                    <img src="https://github-readme-stats.vercel.app/api?username=Mech654&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" 
-                         alt="Mech654's GitHub Stats" class="github-stats">
-                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mech654&theme=tokyonight&hide_border=true" 
-                         alt="Mech654's Streak" class="github-stats">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mech654&theme=tokyonight&show_icons=true&hide_border=true&layout=compact" 
-                         alt="Mech654's Top Languages" class="github-stats">
+                    <img src="https://github-readme-stats.vercel.app/api?username=wildREA&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" 
+                         alt="wildREA's GitHub Stats" class="github-stats">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=wildREA&theme=tokyonight&hide_border=true" 
+                         alt="wildREA's Streak" class="github-stats">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wildREA&theme=tokyonight&show_icons=true&hide_border=true&layout=compact" 
+                         alt="wildREA's Top Languages" class="github-stats">
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="js/project3d.js"></script>
-    <script src="js/skills.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/modal.js"></script>
-    <script>
-        feather.replace();
-        
-        // Project carousel functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const track = document.querySelector('.carousel-track');
-            const cards = Array.from(document.querySelectorAll('.project-card'));
-            const nextButton = document.querySelector('.next-btn');
-            const prevButton = document.querySelector('.prev-btn');
-            const indicators = Array.from(document.querySelectorAll('.carousel-indicator'));
-            
-            let currentIndex = 0;
-            const cardWidth = cards[0].getBoundingClientRect().width;
-            
-            // Set initial position
-            function updateCarousel() {
-                track.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
-                
-                // Update indicators
-                indicators.forEach((indicator, index) => {
-                    if (index === currentIndex) {
-                        indicator.classList.add('current');
-                    } else {
-                        indicator.classList.remove('current');
-                    }
-                });
-                
-                // Update 3D project for the current visible card
-                updateActiveProject(currentIndex);
-            }
-            
-            // Handle next button click
-            nextButton.addEventListener('click', () => {
-                if (currentIndex < cards.length - 1) {
-                    currentIndex++;
-                    updateCarousel();
-                }
-            });
-            
-            // Handle prev button click
-            prevButton.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateCarousel();
-                }
-            });
-            
-            // Handle indicator clicks
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateCarousel();
-                });
-            });
-        });
-    </script>
 </body>
 </html>
